@@ -19,6 +19,9 @@ import json
 def getEmotion():
     # Set the FACE_SUBSCRIPTION_KEY environment variable with your key as the value.
     # This key will serve all examples in this document.
+    #key1: 98aec0f902d3475ca1aec4ad4ff13579
+    #key2: 58638a53022941e28eb0083edeafc5c6
+    #endpoint: https://formoody.cognitiveservices.azure.com/
     KEY = os.environ['FACE_SUBSCRIPTION_KEY']
 
     # Set the FACE_ENDPOINT environment variable with the endpoint from your Face service in Azure.
