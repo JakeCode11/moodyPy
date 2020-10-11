@@ -1,0 +1,7 @@
+azure-ai-textanalytics 
+scikit-build
+cmake
+opencv-python
+pytesseract
+matplotlib
+PyQt5
