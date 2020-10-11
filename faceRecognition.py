@@ -18,14 +18,9 @@ import json
 
 def getEmotion():
     # Set the FACE_SUBSCRIPTION_KEY environment variable with your key as the value.
-    # This key will serve all examples in this document.
-    #key1: 98aec0f902d3475ca1aec4ad4ff13579
-    #key2: 58638a53022941e28eb0083edeafc5c6
-    #endpoint: https://formoody.cognitiveservices.azure.com/
     KEY = os.environ['FACE_SUBSCRIPTION_KEY']
 
     # Set the FACE_ENDPOINT environment variable with the endpoint from your Face service in Azure.
-    # This endpoint will be used in all examples in this quickstart.
     ENDPOINT = os.environ['FACE_ENDPOINT']
 
     headers = {'Ocp-Apim-Subscription-Key': KEY,
@@ -38,7 +33,7 @@ def getEmotion():
         }
 
     # Read the local image into a byte array
-    filename = "C:/Users/weiyi/Desktop/ImageToAnalyze.jpg"
+    filename = ""
     f = open(filename, "rb")
     body = f.read()
     f.close()
