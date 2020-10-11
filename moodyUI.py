@@ -12,8 +12,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog
 from PIL import Image
 import os
+import random
+import time
 import imageToText as ITT
 import sentAnalysis as SA
+import faceRecognition as FR
 
 
 class Ui_MainWindow(object):
@@ -180,6 +183,7 @@ class Ui_MainWindow(object):
                 "        );\n"
                 "    }")
                 self.resultsBtn.setObjectName("resultsBtn")
+                self.resultsBtn.clicked.connect(self.emotionImageRating)
                 self.gridLayout_4.addWidget(self.resultsBtn, 7, 2, 1, 2)
                 self.imagePrev = QtWidgets.QLabel(self.page_2)
                 self.imagePrev.setStyleSheet("background: transparent;")
@@ -1463,17 +1467,29 @@ class Ui_MainWindow(object):
         
         def quizTransition(self):
                 self.stackedWidget.setCurrentIndex(4)
+                self.quizCheckLabel.setText("No answer yet")
+                self.emotionOutputLabel.setText("No emotion yet")
+                image = random.choice(os.listdir("./images"))
+                image = 'images/' + image
+                image = Image.open(image)
+                image.thumbnail((250, 250))
+                image.save('tempimg.png')
+                self.label_9.setPixmap(QtGui.QPixmap('tempimg.png'))
 
         def uploadImage(self):
-                imgDir = QFileDialog.getOpenFileName(None, 'Select Image', 'C:\\', "Image files (*.jpg *.png)" )
+                imgDir = QFileDialog.getOpenFileName(None, 'Select Image', '.', "Image files (*.jpg *.png)" )
                 if imgDir[0] != '':
                         image = Image.open(imgDir[0])
                         image.thumbnail((250, 250))
                         image.save('tempimg.png')
                         self.imagePrev.setPixmap(QtGui.QPixmap('tempimg.png'))
         
+        def emotionImageRating(self):
+                emotion = FR.imageToEmotion('tempimg.png')
+                self.facePGRating.setText(emotion)
+
         def uploadTextImage(self):
-                imgDir = QFileDialog.getOpenFileName(None, 'Select Image', 'C:\\', "Image files (*.jpg *.png)" )
+                imgDir = QFileDialog.getOpenFileName(None, 'Select Image', '.', "Image files (*.jpg *.png)" )
                 if imgDir[0] != '':
                         image = Image.open(imgDir[0])
                         image.thumbnail((250, 250))
@@ -1498,7 +1514,19 @@ class Ui_MainWindow(object):
                 self.textPGRating.setText(rating)
         
         def quizAnswer(self, response):
-                print(response)
+                emotion = FR.imageToEmotion('tempimg.png')
+                if emotion == response:
+                        self.quizCheckLabel.setText("Correct")
+                else:
+                        self.quizCheckLabel.setText("Incorrect")
+                self.emotionOutputLabel.setText(emotion)
+                time.sleep(6)
+                image = random.choice(os.listdir("./images"))
+                image = 'images/' + image
+                image = Image.open(image)
+                image.thumbnail((250, 250))
+                image.save('tempimg.png')
+                self.label_9.setPixmap(QtGui.QPixmap('tempimg.png'))
 
 if __name__ == "__main__":
         import sys
