@@ -4,3 +4,4 @@ cmake
 opencv-python
 pytesseract
 matplotlib
+PyQt5
