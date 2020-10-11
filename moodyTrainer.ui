@@ -42,7 +42,7 @@
           <string notr="true">background: transparent;</string>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="page">
           <layout class="QGridLayout" name="gridLayout_3">
@@ -1344,7 +1344,7 @@ QPushButton:pressed {
          <widget class="QWidget" name="page_5">
           <layout class="QGridLayout" name="gridLayout_7">
            <item row="11" column="0">
-            <widget class="QPushButton" name="disgustBtn">
+            <widget class="QPushButton" name="exitBtn4">
              <property name="font">
               <font>
                <family>Tahoma</family>
@@ -1564,7 +1564,7 @@ QPushButton:pressed {
             </widget>
            </item>
            <item row="7" column="0">
-            <widget class="QPushButton" name="pushButton_11">
+            <widget class="QPushButton" name="disgustBtn">
              <property name="font">
               <font>
                <family>Tahoma</family>

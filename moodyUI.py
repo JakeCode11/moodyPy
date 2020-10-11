@@ -901,13 +901,13 @@ class Ui_MainWindow(object):
         self.page_5.setObjectName("page_5")
         self.gridLayout_7 = QtWidgets.QGridLayout(self.page_5)
         self.gridLayout_7.setObjectName("gridLayout_7")
-        self.disgustBtn = QtWidgets.QPushButton(self.page_5)
+        self.exitBtn4 = QtWidgets.QPushButton(self.page_5)
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         font.setBold(True)
         font.setWeight(75)
-        self.disgustBtn.setFont(font)
-        self.disgustBtn.setStyleSheet("QPushButton {\n"
+        self.exitBtn4.setFont(font)
+        self.exitBtn4.setStyleSheet("QPushButton {\n"
 "    color: black;\n"
 "    border: 2px solid White;\n"
 "    border-radius: 7px;\n"
@@ -933,8 +933,8 @@ class Ui_MainWindow(object):
 "        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
 "        );\n"
 "    }")
-        self.disgustBtn.setObjectName("disgustBtn")
-        self.gridLayout_7.addWidget(self.disgustBtn, 11, 0, 1, 1)
+        self.exitBtn4.setObjectName("exitBtn4")
+        self.gridLayout_7.addWidget(self.exitBtn4, 11, 0, 1, 1)
         self.angerBtn = QtWidgets.QPushButton(self.page_5)
         font = QtGui.QFont()
         font.setFamily("Tahoma")
@@ -1058,13 +1058,13 @@ class Ui_MainWindow(object):
 "    }")
         self.facePGBtn3.setObjectName("facePGBtn3")
         self.gridLayout_7.addWidget(self.facePGBtn3, 11, 3, 1, 1)
-        self.pushButton_11 = QtWidgets.QPushButton(self.page_5)
+        self.disgustBtn = QtWidgets.QPushButton(self.page_5)
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         font.setBold(True)
         font.setWeight(75)
-        self.pushButton_11.setFont(font)
-        self.pushButton_11.setStyleSheet("QPushButton {\n"
+        self.disgustBtn.setFont(font)
+        self.disgustBtn.setStyleSheet("QPushButton {\n"
 "    color: black;\n"
 "    border: 2px solid White;\n"
 "   border-radius: 7px;\n"
@@ -1090,8 +1090,8 @@ class Ui_MainWindow(object):
 "        radius: 1.35, stop: 0 #fff, stop: 1 #ddd\n"
 "        );\n"
 "    }")
-        self.pushButton_11.setObjectName("pushButton_11")
-        self.gridLayout_7.addWidget(self.pushButton_11, 7, 0, 1, 1)
+        self.disgustBtn.setObjectName("disgustBtn")
+        self.gridLayout_7.addWidget(self.disgustBtn, 7, 0, 1, 1)
         self.fearBtn = QtWidgets.QPushButton(self.page_5)
         font = QtGui.QFont()
         font.setFamily("Tahoma")
@@ -1352,7 +1352,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1390,12 +1390,12 @@ class Ui_MainWindow(object):
         self.textPGTypeBtn2.setText(_translate("MainWindow", "Text Playground (Typing)"))
         self.facePGBtn2.setText(_translate("MainWindow", "Face Playground"))
         self.quizModeBtn3.setText(_translate("MainWindow", "Quiz Mode (Faces)"))
-        self.disgustBtn.setText(_translate("MainWindow", "Exit"))
+        self.exitBtn4.setText(_translate("MainWindow", "Exit"))
         self.angerBtn.setText(_translate("MainWindow", "Anger"))
         self.label_8.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Face Quiz</span></p></body></html>"))
         self.textPGTypeBtn3.setText(_translate("MainWindow", "Text Playground (Typing)"))
         self.facePGBtn3.setText(_translate("MainWindow", "Face Playground"))
-        self.pushButton_11.setText(_translate("MainWindow", "Disgust"))
+        self.disgustBtn.setText(_translate("MainWindow", "Disgust"))
         self.fearBtn.setText(_translate("MainWindow", "Fear"))
         self.neutralBtn.setText(_translate("MainWindow", "Neutral"))
         self.surprisedBtn.setText(_translate("MainWindow", "Surprised"))
