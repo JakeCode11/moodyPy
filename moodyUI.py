@@ -1406,7 +1406,7 @@ class Ui_MainWindow(object):
         self.happyBtn.setText(_translate("MainWindow", "Happy"))
         self.label_10.setText(_translate("MainWindow", "<Correct or Incorrect>"))
 
-
+"""
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
@@ -1415,3 +1415,4 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
+"""
