@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow
 
 from moodyUI import Ui_MainWindow
+from PyQt5 import QtCore
 
 class MainWindow:
     def __init__(self):
@@ -33,6 +34,12 @@ class MainWindow:
         self.ui.quizModeBtn2.clicked.connect(self.showQuiz)
         self.ui.quizModeBtn3.clicked.connect(self.showQuiz)
 
+        #quit program
+        self.ui.exitBtn.clicked.connect(self.closeIt)
+        self.ui.exitBtn2.clicked.connect(self.closeIt)
+        self.ui.exitBtn3.clicked.connect(self.closeIt)
+        self.ui.exitBtn4.clicked.connect(self.closeIt)
+
     def show(self):
         self.main_win.show()
     
@@ -47,6 +54,9 @@ class MainWindow:
 
     def showQuiz(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.page_5)
+
+    def closeIt(self):
+        sys.exit()
 
 
 
